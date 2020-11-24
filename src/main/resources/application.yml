@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: user-details-service
+  datasource:
+    username: ${DATABASE_USERNAME:administrator}
+    password: ${DATABASE_PASSWORD:password}
+    url: ${DATABASE_URI:jdbc:postgresql://host:5432/db?currentSchema=public}
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    hibernate.ddl-auto: none
+    generate-ddl: true
+
+server:
+  error:
+    include-stacktrace: never
+  port: ${SERVER_PORT:8010}
+  servlet:
+    context-path: /api/user/
+
+management:
+  server:
+    port: ${MANAGE_PORT:9010}
+    base-path: /manage
