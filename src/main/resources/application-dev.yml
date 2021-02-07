@@ -13,7 +13,7 @@ spring:
 
 server:
   error:
-    include-stacktrace: never
+    include-stacktrace: always
   port: ${SERVER_PORT:8010}
   servlet:
     context-path: /api/user/
